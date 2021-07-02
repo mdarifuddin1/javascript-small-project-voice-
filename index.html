@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Arif Uddin demo</title>
+</head>
+
+<body>
+    <input type="text" placeholder="write your Question">
+    <button>Ask</button>
+
+
+    <script>
+        var qus = document.querySelector("input");
+        var ask = document.querySelector("button");
+
+
+
+
+        ask.addEventListener("click", function() {
+            if (qus.value == "How are you") {
+
+                let utterance = new SpeechSynthesisUtterance("I am fine And What about You");
+                speechSynthesis.speak(utterance);
+            }
+
+            if (qus.value == "Who are you") {
+
+                let utterance = new SpeechSynthesisUtterance(
+                    "I am Md. Arif Uddin thanks Creative It very nice presentation Shaon Sir");
+
+                speechSynthesis.speak(utterance);
+            }
+
+        });
+    </script>
+</body>
+
+</html>
